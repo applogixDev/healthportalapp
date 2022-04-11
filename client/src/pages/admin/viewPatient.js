@@ -20,7 +20,7 @@ const ViewPatient = () => {
    const getPatient = () =>{
 
     
-       let url = `http://localhost:3031/api/patients/${patientId}`
+       let url = `https://healthportalapp.herokuapp.com/api/patients/${patientId}`
        axios.get(url).then((res)=>{
           setPatient(res.data);
           console.log(res.data);

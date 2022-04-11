@@ -19,7 +19,7 @@ const Register = ({history}) =>{
   const handleClick = async (e) => {
     try{
       e.preventDefault();
-      const {data} = await axios.post("http://localhost:3031/api/register",{
+      const {data} = await axios.post("https://healthportalapp.herokuapp.com/api/register",{
         firstName,
         lastName,
         email,

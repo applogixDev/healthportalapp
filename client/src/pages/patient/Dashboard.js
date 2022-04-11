@@ -13,7 +13,7 @@ const Dashboard = () => {
   }, []);
 
   let getAllPatients = () => {
-    let patUrl = "http://localhost:3031/api/patients";
+    let patUrl = "https://healthportalapp.herokuapp.com/api/patients";
     axios
       .get(patUrl)
       .then((res) => {
@@ -28,7 +28,7 @@ const Dashboard = () => {
   };
 
   const handleDeletePatient = (patientId) => {
-    let dataUrl = `http://localhost:3031/api/patients/${patientId}`;
+    let dataUrl = `https://healthportalapp.herokuapp.com/api/patients/${patientId}`;
 
     axios
       .delete(dataUrl)

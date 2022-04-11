@@ -34,7 +34,7 @@ const AddPatient = () => {
         try{
             setLoading(true);
             e.preventDefault();
-            const{data}=await axios.post(`http://localhost:3031/api/createpatient`,{
+            const{data}=await axios.post(`https://healthportalapp.herokuapp.com/api/createpatient`,{
                 firstName,lastName,age,contactNumber,emerContactNum,email,gender,dob,registerNumber,houseNumber,street,city,state,postcode
             })
             toast.success('Details added successfully');

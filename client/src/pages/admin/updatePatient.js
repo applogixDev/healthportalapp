@@ -27,7 +27,7 @@ const UpdatePatient = () => {
   }, [patientId]);
   
   const loadPatientInfo = async () => {
-    const {data} = await axios.get(`http://localhost:3031/api/patients/${patientId}`)
+    const {data} = await axios.get(`https://healthportalapp.herokuapp.com/api/patients/${patientId}`)
     
     setContactNumber(data.contactNumber);
     setEmerContactNum(data.emerContactNum);
@@ -86,7 +86,7 @@ const UpdatePatient = () => {
   let submitPatient =  (event) => {
     
       event.preventDefault();
-      let dataUrl = `http://localhost:3031/api/patients/${patientId}`
+      let dataUrl = `https://healthportalapp.herokuapp.com/api/patients/${patientId}`
     
     
        axios.put(dataUrl,{contactNumber,emerContactNum,email,houseNumber,street,city,state,postcode})

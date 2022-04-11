@@ -20,7 +20,7 @@ const Login = ({history}) =>{
     // return;
     try{
       e.preventDefault();
-      const {data} = await axios.post("http://localhost:3031/api/login",{
+      const {data} = await axios.post("https://healthportalapp.herokuapp.com/api/login",{
         
         email,
         password
